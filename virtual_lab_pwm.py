@@ -24,8 +24,9 @@ def simulate():
 
 tk=Tk()
 tk.title("Pulse Width Modulation using 555 Timer")
-tk.geometry("1200x700")                                           #Code for selecting files from directory
-fig=PhotoImage(file='PWM.png')                                            #Code for opening the image file
+tk.geometry("1200x700")
+fg=fd.askopenfilename()                                            #Code for selecting files from directory
+fig=PhotoImage(file=fg))                                            #Code for opening the image file
 Label(tk,image=fig,height=400,width=800).grid(row=0,column=1)      #Code for displaying image in label
 Label(tk,text="Set Amplitude:").grid(row=1,column=0)
 spb1=Spinbox(tk,from_=1,to=10)                                        #Spinbox creation for amplitude selection
